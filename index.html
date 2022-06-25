@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- fontawesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- my style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Train</title>
+</head>
+
+<body>
+    <div class="container">
+        <section id="form" class="m-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Inserisci i tuoi dati
+                    </h5>
+                    <hr>
+                    <div class="row row-cols-md-3">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" value="Marco">
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="kms" class="form-label">Chilometri</label>
+                            <input type="number" class="form-control" id="kms" value="10">
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="age" class="form-label">Fascia d'età</label>
+                            <select class="form-select" id="age">
+                                <option value="">Maggiorenne</option>
+                                <option value="min">Minorenne</option>
+                                <option value="over">Over 65</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-end">
+                    <button type="button" class="btn btn-secondary me-3" id="cancel-button">Annulla</button>
+                    <button type="button" class="btn btn-primary" id="confirm-button">Conferma</button>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="ticket-section" class="m-5 d-none">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="img/treno.jpg" class="img-fluid rounded-start" alt="treno">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title mb-5">Card title</h5>
+                            <hr>
+                            <h4 id="passenger-name" class="mt-4">Marco Beraldo</h4>
+                            <div class="row row-cols-md-4">
+
+                                <div class="col-12">
+                                    <h6>Tariffa</h6>
+                                    <div id="rate">Tariffa Ordinaria</div>
+                                </div>
+                                <div class="col-12">
+                                    <h6>Carrozza</h6>
+                                    <div id="car"></div>
+                                </div>
+                                <div class="col-12">
+                                    <h6>PNR</h6>
+                                    <div id="pnr"></div>
+                                </div>
+                                <div class="col-12">
+                                    <h6>Totale</h6>
+                                    <div id="price">€10</div>
+                                </div>
+                            </div>
+                            <div class="mt-5 d-flex justify-content-end">
+                                <button type="button" class="btn btn-success" id="buy-button">Conferma acquisto</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
